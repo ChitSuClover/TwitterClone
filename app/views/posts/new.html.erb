@@ -1,0 +1,7 @@
+<%= form_with(model: @post, local: true, url: new_post_path) do |form| %>
+<div class="post_content">
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+</div>
+  <%= form.submit "Tweet"%>
+<% end %>
