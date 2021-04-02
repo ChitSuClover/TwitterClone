@@ -8,10 +8,15 @@ class PostsController < ApplicationController
   end
   def create
     @post=Post.create(post_params)
-    if @post.save
-      redirect_to posts_path
-    else
+    if params[:back]
+      @post=Post.new(post_params)
       render :new
+    else
+      if @post.save
+        redirect_to posts_path
+      else
+        render :new
+      end
     end
   end
   def edit
