@@ -25,6 +25,11 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+  def destroy
+    @post=Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path, notice: "メッセージを削除しました！"
+  end
   private
   def post_params
     params.require(:post).permit(:content)
