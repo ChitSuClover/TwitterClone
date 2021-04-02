@@ -1,5 +1,5 @@
 <h2>以下の内容で送信しますか？</h2>
-<%= form_with(model: @post, url: blogs_path, local: true) do |form| %>
+<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
   <p>Message: <%= @post.content %></p>
   <%= form.submit "送信する" %>

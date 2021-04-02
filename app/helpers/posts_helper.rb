@@ -4,5 +4,6 @@ module PostsHelper
       confirm_posts_path
     else action_name == 'edit'
       post_path
+    end
   end
 end
