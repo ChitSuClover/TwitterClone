@@ -7,11 +7,11 @@ class PostsController < ApplicationController
     @post=Post.new
   end
   def create
-    @post=Post.create(post_params)
     if params[:back]
-      #@post=Post.new(post_params)
+      @post=Post.new(post_params)
       render :new
     else
+      @post=Post.create(post_params)
       if @post.save
         redirect_to posts_path
       else
