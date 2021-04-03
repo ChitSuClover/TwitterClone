@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   def create
     @post=Post.create(post_params)
     if params[:back]
-      @post=Post.new(post_params)
+      #@post=Post.new(post_params)
       render :new
     else
       if @post.save
@@ -42,6 +42,6 @@ class PostsController < ApplicationController
     params.require(:post).permit(:content)
   end
   def set_post
-    @post=Post.find(params[:id])
+      @post=Post.find(params[:id])
   end
 end
