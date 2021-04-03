@@ -31,6 +31,7 @@ table{
   background-color:#DAF7A6;
   width: 400px;
   clear: both;
+  table-layout: fixed;
 }
 th{
   color: #000;
@@ -40,6 +41,7 @@ td{
   padding: 5px 10px;
   font-family: monospace;
   width: 70%;
+  overflow: hidden;
 }
 td .table_data{
   text-align: right;

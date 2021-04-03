@@ -11,7 +11,7 @@
     </tr>
   <% @posts.each do |post| %>
     <tr>
-      <td><%= post.content %></td>
+      <td ><%= post.content %></td>
       <td class="table_data"><%= link_to "編集", edit_post_path(post.id), data: {confirm: '本当に編集していいですか？'}, class:"post_link" %>
           <%= link_to "削除", post_path(post.id),method: :delete, data: {confirm: '本当に削除していいですか？'}, class:"post_link"%></td>
     </tr>
